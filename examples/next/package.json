@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "next": "^1.1.2"
+  },
+  "name": "next-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  }
+}

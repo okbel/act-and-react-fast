@@ -7,7 +7,7 @@ import Github from './components/Github'
 const AppRouter = () => (
   <Router>
     <Home path='/' />
-    <Github path='github/:user?' />
+    <Github path='github' />
   </Router>
 )
 

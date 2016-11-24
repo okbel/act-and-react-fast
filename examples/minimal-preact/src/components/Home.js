@@ -4,7 +4,7 @@ import { Link } from 'preact-router'
 export default () => (
   <div style={styles.containerStyle}>
     <h1>Github search</h1>
-    <Link style={styles.button} href='/github/okbel'>
+    <Link style={styles.button} href='/github?user=okbel'>
       Buscar
     </Link>
   </div>

@@ -1,10 +1,11 @@
 {
-  "name": "react-router-wp2",
+  "name": "minimal-react",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node webpack-dev-server",
+    "start": "node server",
+    "dev": "node webpack-dev-server",
     "build": "rm -rf build/* | NODE_ENV=production webpack -p --progress --env.prod",
     "buildH": "rm -rf build/* | NODE_ENV=production webpack --progress --env.prod"
   },
@@ -15,12 +16,11 @@
     ],
     "plugins": [
       "babel-plugin-transform-async-to-generator",
-      "babel-plugin-transform-object-rest-spread",
-      "babel-plugin-transform-class-properties",
       "babel-plugin-transform-runtime"
     ]
   },
   "dependencies": {
+    "express": "^4.14.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-router": "v3.0.0",
@@ -30,10 +30,7 @@
     "babel-core": "6.18.2",
     "babel-generator": "6.19.0",
     "babel-loader": "6.2.8",
-    "babel-plugin-module-resolver": "2.3.0",
     "babel-plugin-transform-async-to-generator": "6.16.0",
-    "babel-plugin-transform-class-properties": "6.19.0",
-    "babel-plugin-transform-object-rest-spread": "6.19.0",
     "babel-plugin-transform-runtime": "6.15.0",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.16.0",

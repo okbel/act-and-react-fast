@@ -1,1 +1,0 @@
-webpackJsonp([0],{220:function(e,t,n){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}var u=n(5),r=l(u),d=n(39);(0,d.render)(r.default.createElement("h1",null,"Hello, World!"),document.getElementById("App"))}},[220]);

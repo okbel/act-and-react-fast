@@ -4,5 +4,5 @@ import Router from './Router'
 
 render(
   <Router />,
-  document.getElementById('App')
+  document.getElementById('root')
 )

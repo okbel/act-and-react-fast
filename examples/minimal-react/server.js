@@ -1,11 +1,9 @@
-var express = require('express')
-var path = require('path')
-var app = express()
+const express = require('express')
+const path = require('path')
+const app = express()
 
 app.use(express.static(path.resolve('build')))
 
-app.get('/', function (req, res) {
-  res.sendFile('index.html')
-})
+app.get('/', (req, res) => res.sendFile('index.html'))
 
 app.listen(3000)

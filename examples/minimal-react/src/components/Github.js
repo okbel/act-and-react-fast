@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import GithubBadge from './GithubBadge'
 
-export default class GithubCon extends Component {
+export default class Github extends Component {
   constructor (props) {
     super(props)
     this.state = {

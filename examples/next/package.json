@@ -1,14 +1,17 @@
 {
-  "dependencies": {
-    "next": "^1.1.2"
-  },
-  "name": "next-example",
+  "name": "next",
   "version": "1.0.0",
+  "description": "Example using NextJS",
   "main": "index.js",
+  "author": "Belen Curcio",
   "license": "MIT",
   "scripts": {
     "dev": "next",
-    "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "next": "^1.1.2"
   }
 }

@@ -4,31 +4,31 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getPrototypeOf = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/core-js/object/get-prototype-of');
+var _getPrototypeOf = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/classCallCheck');
+var _classCallCheck2 = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/classCallCheck');
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/createClass');
+var _createClass2 = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/possibleConstructorReturn');
+var _possibleConstructorReturn2 = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/possibleConstructorReturn');
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/inherits');
+var _inherits2 = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/react/react.js');
+var _react = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/react/react.js');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _css = require('/Users/bel/Talks/act-and-react-fast/examples/next/node_modules/next/dist/lib/css.js');
+var _css = require('/Users/bel/Desktop/Talks/act-and-react-fast/examples/next/node_modules/next/dist/lib/css.js');
 
 var _css2 = _interopRequireDefault(_css);
 
@@ -108,3 +108,21 @@ var styles = {
     padding: 0
   })
 };
+    if (module.hot) {
+      module.hot.accept()
+
+      var Component = module.exports.default || module.exports
+      Component.__route = "/_error"
+
+      if (module.hot.status() !== 'idle') {
+        var components = next.router.components
+        for (var r in components) {
+          if (!components.hasOwnProperty(r)) continue
+
+          if (components[r].Component.__route === "/_error") {
+            next.router.update(r, Component)
+          }
+        }
+      }
+    }
+  

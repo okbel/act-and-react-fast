@@ -8,7 +8,7 @@ module.exports = env => {
 
   return {
     entry: {
-      app: path.join(__dirname, 'src/'),
+      app: ['whatwg-fetch', path.join(__dirname, 'src/')],
       vendor: [ 'react', 'react-dom', 'react-router' ]
     },
     output: {

@@ -9,7 +9,10 @@
     "buildH": "rm -rf build/* | NODE_ENV=production webpack --progress --env.prod"
   },
   "babel": {
-    "presets": ["es2015", "react"],
+    "presets": [
+      "es2015",
+      "react"
+    ],
     "plugins": [
       "babel-plugin-transform-async-to-generator",
       "babel-plugin-transform-object-rest-spread",
@@ -20,7 +23,8 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "v3.0.0"
+    "react-router": "v3.0.0",
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "6.18.2",

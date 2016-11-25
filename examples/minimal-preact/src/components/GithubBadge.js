@@ -1,6 +1,6 @@
 import { h, Component } from 'preact'
 
-export default ({user}) => (
+export default ({user = {}}) => (
   <div style={styles.containerStyle}>
     <img style={styles.imgStyle} src={user.avatar_url} />
     <h2 style={styles.nameStyle}>

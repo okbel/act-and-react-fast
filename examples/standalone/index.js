@@ -28,6 +28,8 @@ var element = React.createElement(
  )
 );
 
+console.log('Server Rendered String: ', ReactDOMServer.renderToString(element))
+
 ReactDOM.render(
   element,
   document.getElementById('root')

@@ -1,9 +1,17 @@
 {
+  "name": "act-and-react-fast",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:okbel/act-and-react-fast.git",
+  "author": "Belen Curcio <curciobelen@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server"
+  },
   "dependencies": {
     "babel-standalone": "^6.19.0",
     "express": "^4.14.0",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-dom-server": "^0.0.5"
+    "react-dom": "^15.4.1"
   }
 }

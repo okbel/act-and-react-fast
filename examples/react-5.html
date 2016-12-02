@@ -6,8 +6,8 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript" src="/react.min.js"></script>
-    <script type="text/javascript" src="/react-dom.min.js"></script>
+    <script type="text/javascript" src="/react.js"></script>
+    <script type="text/javascript" src="/react-dom.js"></script>
     <script>
 
       var div = React.DOM.div
@@ -24,6 +24,11 @@
       })
 
       var HeaderFactory = React.createFactory(Header)
+
+      console.log('Header', Header)
+      console.log('HeaderFactory', HeaderFactory)
+      console.log('React.createElement', React.createElement(Header, {title: 'Este tambien es mi titulo'}))
+      console.log(React.Component)
 
       var MiComponente = div(null,
         HeaderFactory({title: React.DOM.span(null, 'Este es mi titulo')}),

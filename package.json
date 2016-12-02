@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "babel-standalone": "^6.19.0",
+    "express": "^4.14.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-dom-server": "^0.0.5"

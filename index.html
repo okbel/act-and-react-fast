@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Act and React. Fast! - React Examples</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript" src="node_modules/react/dist/react.js"></script>
+    <script type="text/javascript" src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script type="text/javascript" src="node_modules/babel-standalone/babel.js"></script>
+    <script type="text/javascript" src="translations.js"></script>
+    <script script type="text/babel" data-presets="es2015, react" data-plugins="">
+
+      const importantLinks = [{
+        description: 'JSX Live',
+        link: 'https://jsx-live.now.sh/'
+      },{
+        description: 'React Top Level API',
+        link: 'https://facebook.github.io/react/docs/react-api.html'
+      },{
+        description: 'React DOM API',
+        link: 'https://facebook.github.io/react/docs/react-dom.html'
+      }, {
+        description: 'React DOM Server',
+        link: 'https://facebook.github.io/react/docs/react-dom-server.html'
+      }]
+
+      const LangSelect = ({handleChange, value}) => (
+        <select value={value} onChange={handleChange}>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+      )
+
+      const Example = ({unique, label}) => (
+        <li>
+          <a href={`examples/react-${unique}.html`}>{label}</a>
+        </li>
+      )
+
+      class App extends React.Component {
+        constructor () {
+          super()
+          this.state = {
+            l: 'es'
+          }
+
+          this.handleChange = this.handleChange.bind(this)
+        }
+
+        handleChange(e) {
+          this.setState({
+            l: e.target.value
+          })
+        }
+
+        render () {
+          const {l} = this.state
+
+          const examples = Object.keys(i18n[l].examples)
+
+
+          return (
+            <div className="wrapper">
+              <header>
+                <LangSelect
+                  handleChange={this.handleChange}
+                  value={l}
+                />
+                <h1>{i18n[l].header}</h1>
+              </header>
+              <main>
+                <section className='courses'>
+                  <h2>{i18n[l].exampleTitle}</h2>
+                  <ul>
+                    {
+                      examples.map((example, i) => (
+                        <Example key={i} unique={i} label={i18n[l].examples[example]} />
+                      )
+                    )}
+                  </ul>
+                </section>
+                <section className='links'>
+                  <h2>{i18n[l].usefulLinks}</h2>
+                  <ul>
+                    {
+                      importantLinks.map((item, i) => (
+                        <li key={i}>
+                          <a href={item.link}>{item.description}</a>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </section>
+              </main>
+            </div>
+          )
+        }
+      }
+
+      ReactDOM.render(<App/>, document.getElementById('app'))
+    </script>
+  </body>
+</html>

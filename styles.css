@@ -1,0 +1,36 @@
+body {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  text-rendering: geometricPrecision;
+  background: white;
+  color: #5200FF;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+  box-shadow: -20px -9px 0px #FF3377;
+  color: white;
+  background-color: #5405FF;
+}
+
+li:hover a {
+  color: white
+}
+
+li a {
+  color: #1C364D;
+  text-decoration: none;
+}

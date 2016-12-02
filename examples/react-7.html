@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Act and React. Fast! - React Example 6</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript" src="../node_modules/react/dist/react.js"></script>
+    <script type="text/javascript" src="../node_modules/react-dom/dist/react-dom.js"></script>
+    <script type="text/javascript" src="../node_modules/react-dom/dist/react-dom-server.js"></script>
+    <script type="text/javascript" src="../node_modules/babel-standalone/babel.js"></script>
+    <script script type="text/babel" data-presets="es2015, react" data-plugins="">
+
+      const Header = () => (
+        <div>
+          <h1>React DOM Server</h1>
+          <p></p>
+        </div>
+      )
+
+      const htmlString = ReactDOMServer.renderToString(<Header/>)
+      console.log(htmlString)
+
+      ReactDOM.render(<Header/>, document.getElementById('app'))
+    </script>
+  </body>
+</html>

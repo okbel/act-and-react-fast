@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Act and React. Fast! - React Example 6</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript" src="../node_modules/react/dist/react.js"></script>
+    <script type="text/javascript" src="../node_modules/react-dom/dist/react-dom.js"></script>
+    <script>
+
+      var div = React.DOM.div
+      var h1 = React.DOM.h1
+
+      var Header = React.createClass({
+        render: function() {
+          return (
+            div(null,
+              h1(null, this.props.title)
+            )
+          )
+        }
+      })
+
+      var HeaderFactory = React.createFactory(Header)
+
+      var MiComponente = div(null,
+        HeaderFactory({title: React.DOM.span(null, 'Este es mi titulo')}),
+        React.createElement(Header, {title: 'Este tambien es mi titulo'})
+      )
+
+      ReactDOM.render(MiComponente, document.getElementById('app'))
+    </script>
+  </body>
+</html>

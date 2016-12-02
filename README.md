@@ -1,6 +1,3 @@
-# Act and React, fast!
+# Act and React! Fast!
 
-This is the repo for the Act and React, fast! Talk
-
-This repo has: 
-  - Examples in React, Preact, Next
+## 

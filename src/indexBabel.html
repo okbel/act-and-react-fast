@@ -7,10 +7,10 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript" src="node_modules/react/dist/react.js"></script>
-    <script type="text/javascript" src="node_modules/react-dom/dist/react-dom.js"></script>
-    <script type="text/javascript" src="node_modules/babel-standalone/babel.js"></script>
-    <script type="text/javascript" src="translations.js"></script>
+    <script type="text/javascript" src="/react.js"></script>
+    <script type="text/javascript" src="/react-dom.js"></script>
+    <script type="text/javascript" src="/react-dom-server.js"></script>
+    <script type="text/javascript" src="/babel.js"></script>
     <script script type="text/babel" data-presets="es2015, react" data-plugins="">
 
       const importantLinks = [{
@@ -25,6 +25,12 @@
       }, {
         description: 'React DOM Server',
         link: 'https://facebook.github.io/react/docs/react-dom-server.html'
+      }, {
+        description: 'Preact',
+        link: 'https://preactjs.com/'
+      }, {
+        description: 'NextJS',
+        link: 'https://zeit.co/blog/next'
       }]
 
       const LangSelect = ({handleChange, value}) => (

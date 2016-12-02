@@ -7,168 +7,172 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript" src="node_modules/react/dist/react.min.js"></script>
-    <script type="text/javascript" src="node_modules/react-dom/dist/react-dom.min.js"></script>
-
+    <script type="text/javascript" src="react.min.js"></script>
+    <script type="text/javascript" src="react-dom.min.js"></script>
     <script type="text/javascript" src="translations.js"></script>
     <script>
-    'use strict';
+      'use strict';
 
-    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+      var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+      function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+      function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+      function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    var importantLinks = [{
-      description: 'JSX Live',
-      link: 'https://jsx-live.now.sh/'
-    }, {
-      description: 'React Top Level API',
-      link: 'https://facebook.github.io/react/docs/react-api.html'
-    }, {
-      description: 'React DOM API',
-      link: 'https://facebook.github.io/react/docs/react-dom.html'
-    }, {
-      description: 'React DOM Server',
-      link: 'https://facebook.github.io/react/docs/react-dom-server.html'
-    }];
-
-    var LangSelect = function LangSelect(_ref) {
-      var handleChange = _ref.handleChange,
-          value = _ref.value;
-      return React.createElement(
-        'select',
-        { value: value, onChange: handleChange },
-        React.createElement(
-          'option',
-          { value: 'es' },
-          'ES'
-        ),
-        React.createElement(
-          'option',
-          { value: 'en' },
-          'EN'
-        )
-      );
-    };
-
-    var Example = function Example(_ref2) {
-      var unique = _ref2.unique,
-          label = _ref2.label;
-      return React.createElement(
-        'li',
-        null,
-        React.createElement(
-          'a',
-          { href: '../examples/react-' + unique + '.html' },
-          label
-        )
-      );
-    };
-
-    var App = function (_React$Component) {
-      _inherits(App, _React$Component);
-
-      function App() {
-        _classCallCheck(this, App);
-
-        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
-
-        _this.state = {
-          l: 'es'
-        };
-
-        _this.handleChange = _this.handleChange.bind(_this);
-        return _this;
-      }
-
-      _createClass(App, [{
-        key: 'handleChange',
-        value: function handleChange(e) {
-          this.setState({
-            l: e.target.value
-          });
-        }
+      var importantLinks = [{
+        description: 'JSX Live',
+        link: 'https://jsx-live.now.sh/'
       }, {
-        key: 'render',
-        value: function render() {
-          var l = this.state.l;
+        description: 'React Top Level API',
+        link: 'https://facebook.github.io/react/docs/react-api.html'
+      }, {
+        description: 'React DOM API',
+        link: 'https://facebook.github.io/react/docs/react-dom.html'
+      }, {
+        description: 'React DOM Server',
+        link: 'https://facebook.github.io/react/docs/react-dom-server.html'
+      }, {
+        description: 'Preact',
+        link: 'https://preactjs.com/'
+      }, {
+        description: 'NextJS',
+        link: 'https://zeit.co/blog/next'
+      }];
+
+      var LangSelect = function LangSelect(_ref) {
+        var handleChange = _ref.handleChange,
+          value = _ref.value;
+        return React.createElement(
+          'select',
+          { value: value, onChange: handleChange },
+          React.createElement(
+            'option',
+            { value: 'es' },
+            'ES'
+          ),
+          React.createElement(
+            'option',
+            { value: 'en' },
+            'EN'
+          )
+        );
+      };
+
+      var Example = function Example(_ref2) {
+        var unique = _ref2.unique,
+          label = _ref2.label;
+        return React.createElement(
+          'li',
+          null,
+          React.createElement(
+            'a',
+            { href: '../examples/react-' + unique + '.html' },
+            label
+          )
+        );
+      };
+
+      var App = function (_React$Component) {
+        _inherits(App, _React$Component);
+
+        function App() {
+          _classCallCheck(this, App);
+
+          var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+          _this.state = {
+            l: 'es'
+          };
+
+          _this.handleChange = _this.handleChange.bind(_this);
+          return _this;
+        }
+
+        _createClass(App, [{
+          key: 'handleChange',
+          value: function handleChange(e) {
+            this.setState({
+              l: e.target.value
+            });
+          }
+        }, {
+          key: 'render',
+          value: function render() {
+            var l = this.state.l;
 
 
-          var examples = Object.keys(i18n[l].examples);
+            var examples = Object.keys(i18n[l].examples);
 
-          return React.createElement(
-            'div',
-            { className: 'wrapper' },
-            React.createElement(
-              'header',
-              null,
-              React.createElement(LangSelect, {
-                handleChange: this.handleChange,
-                value: l
-              }),
+            return React.createElement(
+              'div',
+              { className: 'wrapper' },
               React.createElement(
-                'h1',
+                'header',
                 null,
-                i18n[l].header
-              )
-            ),
-            React.createElement(
-              'main',
-              null,
-              React.createElement(
-                'section',
-                { className: 'courses' },
+                React.createElement(LangSelect, {
+                  handleChange: this.handleChange,
+                  value: l
+                }),
                 React.createElement(
-                  'h2',
+                  'h1',
                   null,
-                  i18n[l].exampleTitle
-                ),
-                React.createElement(
-                  'ul',
-                  null,
-                  examples.map(function (example, i) {
-                    return React.createElement(Example, { key: i, unique: i, label: i18n[l].examples[example] });
-                  })
+                  i18n[l].header
                 )
               ),
               React.createElement(
-                'section',
-                { className: 'links' },
+                'main',
+                null,
                 React.createElement(
-                  'h2',
-                  null,
-                  i18n[l].usefulLinks
+                  'section',
+                  { className: 'courses' },
+                  React.createElement(
+                    'h2',
+                    null,
+                    i18n[l].exampleTitle
+                  ),
+                  React.createElement(
+                    'ul',
+                    null,
+                    examples.map(function (example, i) {
+                      return React.createElement(Example, { key: i, unique: i, label: i18n[l].examples[example] });
+                    })
+                  )
                 ),
                 React.createElement(
-                  'ul',
-                  null,
-                  importantLinks.map(function (item, i) {
-                    return React.createElement(
-                      'li',
-                      { key: i },
-                      React.createElement(
-                        'a',
-                        { href: item.link },
-                        item.description
-                      )
-                    );
-                  })
+                  'section',
+                  { className: 'links' },
+                  React.createElement(
+                    'h2',
+                    null,
+                    i18n[l].usefulLinks
+                  ),
+                  React.createElement(
+                    'ul',
+                    null,
+                    importantLinks.map(function (item, i) {
+                      return React.createElement(
+                        'li',
+                        { key: i },
+                        React.createElement(
+                          'a',
+                          { href: item.link },
+                          item.description
+                        )
+                      );
+                    })
+                  )
                 )
               )
-            )
-          );
-        }
-      }]);
+            );
+          }
+        }]);
 
-      return App;
-    }(React.Component);
+        return App;
+      }(React.Component);
 
-    ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
-
+      ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
     </script>
   </body>
 </html>

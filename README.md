@@ -39,7 +39,7 @@ Add an issue if you find any.
 
 ## Act and React. Fast! Online
 
-[https://act-and-react-fast.now.sh/](https://act-and-react-fast.now.sh/
+[https://act-and-react-fast.now.sh/](https://act-and-react-fast.now.sh/)
 
 You can navigate the examples and if you want to see the source files you can come here or Right Click -> View Page Source ;)
 

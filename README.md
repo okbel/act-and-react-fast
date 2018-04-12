@@ -2,7 +2,7 @@
 > Accioná y reaccioná. Rápido!
 
 Este repo está basado la charla *Act and React. Fast!*. Acá están todos los ejemplos usados en la charla.
-http://devday-ar.com/
+http://devday-ar.com/ - https://www.youtube.com/watch?v=mlfJ12uFOVc
 
 
 ## Propósito
@@ -27,7 +27,7 @@ Podes ir navegando en cada ejemplo. Si querés ver el codigo fuente: podés hace
 # Act and React. Fast!
 
 This repo was created based on the *Act and React. Fast!* talk. All the provided examples during the talk are here.
-http://devday-ar.com/
+http://devday-ar.com/ - https://www.youtube.com/watch?v=mlfJ12uFOVc
 
 ## Purpuse
 The idea is to keep uploading examples from the basics to the most advanced tecniques. Also, show API use cases.
